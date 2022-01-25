@@ -10,6 +10,8 @@ public class playerController : MonoBehaviour
     public float rotatesepeed = 5f;
     private Animator boton;
     private Animator door;
+
+
     void Start()
     {
         boton = GameObject.Find("button").GetComponent<Animator>();
@@ -32,6 +34,11 @@ public class playerController : MonoBehaviour
         {
             boton.SetBool("press", true);
             door.SetBool("open", true);
+        }
+
+        if(othercollider.gameObject.CompareTag("close"))
+        {
+            door.SetBool("open", false);
         }
     }
     

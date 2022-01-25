@@ -6,6 +6,7 @@ TagManager:
   tags:
   - puerta
   - button
+  - close
   layers:
   - Default
   - TransparentFX
