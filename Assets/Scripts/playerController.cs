@@ -6,16 +6,18 @@ public class playerController : MonoBehaviour
 {
     private float  HorizontalInput;
     private float VerticalInput;
-    public float speed = 5f;
-    public float rotatesepeed = 5f;
-    private Animator boton;
-    private Animator door;
+    public float speed = 30f;
+    public float rotatesepeed = 35f;
+    //private Animator boton;
+    //private Animator door;
+    private Animator mover;
 
 
     void Start()
     {
-        boton = GameObject.Find("button").GetComponent<Animator>();
-        door = GameObject.Find("puerta").GetComponent<Animator>();
+        //boton = GameObject.Find("button").GetComponent<Animator>();
+        //door = GameObject.Find("puerta").GetComponent<Animator>();
+        mover = GetComponent<Animator>();
     }
 
     void Update()
@@ -28,7 +30,7 @@ public class playerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider othercollider)
+    /*private void OnTriggerEnter(Collider othercollider)
     {
         if (othercollider.gameObject.CompareTag("button"))
         {
@@ -41,6 +43,6 @@ public class playerController : MonoBehaviour
             door.SetBool("open", false);
         }
     }
-    
+    */
 
 }
